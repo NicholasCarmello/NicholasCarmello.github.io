@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Tic-tac-toe </title>
+
+    <link rel = "stylesheet" href = "{{ url_for('static', filename='TicTacCSS.css') }}" >
+    <script type = "text/javascript">
+
+
+
+    </script>
+</head>
+<body>
+<div class="header">
+  <h1>Tic Tac Toe</h1>
+</div>
+
+<form>
+<table>
+    <tr>
+        <td style = "border-left: 10px solid dodgerBlue; height: 558px;left:35%; top:90px; position: absolute;">
+
+        </td>
+        <td style = "border-left: 10px solid dodgerBlue; height: 558px;left:45%;top:90px; position: absolute;  ">
+            <input type = "text" id = "input1" pattern = "[x , o , X, O]" title = "Must Be 'x' or 'o'." style="position: absolute; left: 1.6%; border-color:transparent; top: -1px; width: 176px; font-size: 128px;text-align:center">here
+
+
+        </td>
+        <td style = "border-left: 10px solid dodgerBlue; height: 558px;left:55%; top:90px;position: absolute; ">
+
+            <input type = "text" id = "input2" pattern = "[x , o, X, O]" title = "Must Be 'x' or 'o'." style="position: absolute; left: 1.2%; border-color:transparent; top: -1px; width: 176px; font-size: 128px;text-align:center">
+
+        </td>
+        <td style = "border-left: 10px solid dodgerBlue; height: 558px;left:65%;top: 85px; position: absolute; ">
+
+        </td>
+
+    </tr>
+
+
+
+    <tr>
+        <td style = "border-bottom: 10px solid dodgerBlue; width: 580px; top: 250px; left:35%; position:absolute;">
+            <input type = "text" id ="input0" pattern = "[x , o, X, O]" title = "Must Be 'x' or 'o'." style="position: absolute; left: 1.7%; border-color:transparent; top: -158px; width: 176px; font-size: 128px;text-align:center">
+
+        </td>
+        <td style = "border-bottom: 10px solid dodgerBlue; width: 580px; top: 450px; left:35%;position:absolute;">
+            <input type = "text" id = "input3" pattern = "[x , o, X, O]" title = "Must Be 'x' or 'o'." pattern = ".{,1}" title="Only x or o is accepted" style="position: absolute; left: 1.7%; border-color:transparent; top: -188px; width: 176px; font-size:152.5px;text-align:center">
+
+            <input type = "text" id ="input4" pattern = "[x , o, X, O]" title = "Must Be 'x' or 'o'." style="position: absolute; left: 34.5%; border-color:transparent; top: -188px; width: 177px; font-size:152.5px;text-align:center">
+
+            <input type = "text" id ="input5" pattern = "[x , o, X,O]" title = "Must Be 'x' or 'o'." style="position: absolute; left: 67.3%; border-color:transparent; top: -188px; width: 178px; font-size:152.5px;text-align:center">
+
+
+
+        </td>
+
+        <td style = "border-bottom: 10px solid dodgerBlue; width: 584px; top: 641px; left:35%;position:absolute;">
+
+
+            <input type = "text" id = "input6" pattern = "[x , o,X,O]" title = "Must Be 'x' or 'o'." style="position: absolute; left: 1.7%; border-color:transparent; top: -179px; width: 176px; font-size:145px;text-align:center">
+            <input type = "text" id="input7" pattern = "[x , o,X,O]" title = "Must Be 'x' or 'o'." style="position: absolute; left: 34.5%; border-color:transparent; top: -179px; width: 176px; font-size:145px;text-align:center">
+            <input type = "text" id="input8" pattern = "[x , o,X,O]" title = "Must Be 'x' or 'o'." style="position: absolute; left: 67.3%; border-color:transparent; top: -179px; width: 176px; font-size:145px;text-align:center">
+
+
+        </td>
+    </tr>
+
+</table>
+
+    <input type  = "button" value = "Clear Board" style = "border-radius: 5px; border-color:transparent; bottom:150px;
+    position:absolute; left :30%; color:white; background-color:dodgerBlue; font-size: 25px;"  onclick = "Reset()"/>
+    <input type  = "button" id = "hello1" value = "Check Board" style = "border-radius: 5px; border-color:transparent;bottom:150px;
+    position:absolute; left :62.3%; color:white; background-color:Green; font-size: 25px;"  onclick = "check()"/>
+
+    <input type  = "button" id = "DirectWinner" value = "Check winner now" style = "border-radius: 5px; border-color:transparent;bottom:150px;
+    position:absolute; left :62.3%; color:transparent; background-color:transparent; font-size: 25px;"  onclick = "immediate()"/>
+</form>
+
+
+
+<div id = "yeet" style = "position: absolute; left:47%; bottom: 25%;">
+
+</div>
+
+</body>
+<script type = "text/javascript">
+var input = document.getElementById("input0");
+input.addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("DirectWinner").click();
+    }
+});
+var input1 = document.getElementById("input1");
+input1.addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("DirectWinner").click();
+    }
+});
+var input2 = document.getElementById("input2");
+input2.addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("DirectWinner").click();
+    }
+});
+var input3 = document.getElementById("input3");
+input3.addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("DirectWinner").click();
+    }
+});
+var input4 = document.getElementById("input4");
+input4.addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("DirectWinner").click();
+    }
+});
+var input5 = document.getElementById("input5");
+input5.addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("DirectWinner").click();
+    }
+});
+var input6 = document.getElementById("input6");
+input6.addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("DirectWinner").click();
+    }
+});
+var input7 = document.getElementById("input7");
+input7.addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("DirectWinner").click();
+    }
+});
+var input8 = document.getElementById("input8");
+input8.addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("DirectWinner").click();
+    }
+});
+
+
+
+
+
+
+
+
+
+    function immediate(){
+    var input1 = document.getElementById("input0").value;
+    var lowercase1 = input1.toLowerCase();
+
+    var input2 = document.getElementById("input1").value;
+    var lowercase2 = input2.toLowerCase();
+
+    var input3 = document.getElementById("input2").value;
+    var lowercase3 = input3.toLowerCase();
+
+    var input4 = document.getElementById("input3").value;
+    var lowercase4 = input4.toLowerCase();
+
+    var input5 = document.getElementById("input4").value;
+    var lowercase5 = input5.toLowerCase();
+
+    var input6 = document.getElementById("input5").value;
+    var lowercase6 = input6.toLowerCase();
+
+    var input7 = document.getElementById("input6").value;
+    var lowercase7 = input7.toLowerCase();
+
+    var input8 = document.getElementById("input7").value;
+    var lowercase8= input8.toLowerCase();
+
+    var input9 = document.getElementById("input8").value;
+    var lowercase9 = input9.toLowerCase();
+
+       if (lowercase1.localeCompare('x') == 0 && lowercase2.localeCompare('x') == 0 && lowercase3.localeCompare('x') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>X wins</h1>';
+}
+  else if (lowercase1.localeCompare('x') == 0 && lowercase4.localeCompare('x') == 0 && lowercase7.localeCompare('x') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>X wins</h1>';
+}
+  else if (lowercase4.localeCompare('x') == 0 && lowercase5.localeCompare('x') == 0 && lowercase6.localeCompare('x') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>X wins</h1>';
+}
+  else if (lowercase7.localeCompare('x') == 0 && lowercase8.localeCompare('x') == 0 && lowercase9.localeCompare('x') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>X wins</h1>';
+}
+
+  else if (lowercase3.localeCompare('x') == 0 && lowercase6.localeCompare('x') == 0 && lowercase9.localeCompare('x') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>X wins</h1>';
+}
+  else if (lowercase1.localeCompare('x') == 0 && lowercase5.localeCompare('x') == 0 && lowercase9.localeCompare('x') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>X wins</h1>';
+}
+  else if (lowercase3.localeCompare('x') == 0 && lowercase5.localeCompare('x') == 0 && lowercase7.localeCompare('x') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>X wins</h1>';
+}
+else if (lowercase2.localeCompare('x') == 0 && lowercase5.localeCompare('x') == 0 && lowercase8.localeCompare('x') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>X wins</h1>';
+}
+// o starts
+
+  else if (lowercase1.localeCompare('o') == 0 && lowercase2.localeCompare('o') == 0 && lowercase3.localeCompare('o') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>O wins.</h1>';
+}
+  else if (lowercase1.localeCompare('o') == 0 && lowercase4.localeCompare('o') == 0 && lowercase7.localeCompare('o') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>O wins.</h1>';
+}
+  else if (lowercase4.localeCompare('o') == 0 && lowercase5.localeCompare('o') == 0 && lowercase6.localeCompare('o') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>O wins.</h1>';
+}
+  else if (lowercase7.localeCompare('o') == 0 && lowercase8.localeCompare('o') == 0 && lowercase9.localeCompare('o') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>O wins.</h1>';
+}
+
+  else if (lowercase3.localeCompare('o') == 0 && lowercase6.localeCompare('o') == 0 && lowercase9.localeCompare('o') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>O wins.</h1>';
+}
+  else if (lowercase1.localeCompare('o') == 0 && input5.localeCompare('o') == 0 && input9.localeCompare('o') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>O wins.</h1>';
+}
+  else if (lowercase3.localeCompare('o') == 0 && lowercase5.localeCompare('o') == 0 && lowercase7.localeCompare('o') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>O wins.</h1>';
+}
+
+else if (lowercase2.localeCompare('o') == 0 && lowercase5.localeCompare('o') == 0 && lowercase8.localeCompare('o') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>O wins.</h1>';
+}
+
+
+
+
+    }
+
+
+
+
+    function Reset(){
+    document.getElementById("input0").value = '';
+    document.getElementById("input1").value = '';
+    document.getElementById("input2").value = '';
+    document.getElementById("input3").value = '';
+    document.getElementById("input4").value= '';
+    document.getElementById("input5").value ='';
+    document.getElementById("input6").value='';
+    document.getElementById("input7").value= '';
+    document.getElementById("input8").value='';
+
+    document.getElementById("yeet").innerHTML = '';
+
+    }
+
+
+
+    //New Function
+
+
+
+
+    //End of Function
+
+
+
+
+
+
+    function check(){
+    var input1 = document.getElementById("input0").value;
+    var lowercase1 = input1.toLowerCase();
+
+    var input2 = document.getElementById("input1").value;
+    var lowercase2 = input2.toLowerCase();
+
+    var input3 = document.getElementById("input2").value;
+    var lowercase3 = input3.toLowerCase();
+
+    var input4 = document.getElementById("input3").value;
+    var lowercase4 = input4.toLowerCase();
+
+    var input5 = document.getElementById("input4").value;
+    var lowercase5 = input5.toLowerCase();
+
+    var input6 = document.getElementById("input5").value;
+    var lowercase6 = input6.toLowerCase();
+
+    var input7 = document.getElementById("input6").value;
+    var lowercase7 = input7.toLowerCase();
+
+    var input8 = document.getElementById("input7").value;
+    var lowercase8 = input8.toLowerCase();
+
+    var input9 = document.getElementById("input8").value;
+    var lowercase9 = input9.toLowerCase();
+
+
+    if (lowercase1.localeCompare('x') == 0 && lowercase2.localeCompare('x') == 0 && lowercase3.localeCompare('x') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>X wins</h1>';
+}
+  else if (lowercase1.localeCompare('x') == 0 && lowercase4.localeCompare('x') == 0 && lowercase7.localeCompare('x') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>X wins</h1>';
+}
+  else if (lowercase4.localeCompare('x') == 0 && lowercase5.localeCompare('x') == 0 && lowercase6.localeCompare('x') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>X wins</h1>';
+}
+  else if (lowercase7.localeCompare('x') == 0 && lowercase8.localeCompare('x') == 0 && lowercase9.localeCompare('x') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>X wins</h1>';
+}
+
+  else if (lowercase3.localeCompare('x') == 0 && lowercase6.localeCompare('x') == 0 && lowercase9.localeCompare('x') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>X wins</h1>';
+}
+  else if (lowercase1.localeCompare('x') == 0 && lowercase5.localeCompare('x') == 0 && lowercase9.localeCompare('x') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>X wins</h1>';
+}
+  else if (lowercase3.localeCompare('x') == 0 && lowercase5.localeCompare('x') == 0 && lowercase7.localeCompare('x') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>X wins</h1>';
+}
+else if (lowercase2.localeCompare('x') == 0 && lowercase5.localeCompare('x') == 0 && lowercase8.localeCompare('x') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>X wins</h1>';
+}
+// o starts
+
+  else if (lowercase1.localeCompare('o') == 0 && lowercase2.localeCompare('o') == 0 && lowercase3.localeCompare('o') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>O wins.</h1>';
+}
+  else if (lowercase1.localeCompare('o') == 0 && lowercase4.localeCompare('o') == 0 && lowercase7.localeCompare('o') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>O wins.</h1>';
+}
+  else if (lowercase4.localeCompare('o') == 0 && lowercase5.localeCompare('o') == 0 && lowercase6.localeCompare('o') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>O wins.</h1>';
+}
+  else if (lowercase7.localeCompare('o') == 0 && lowercase8.localeCompare('o') == 0 && lowercase9.localeCompare('o') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>O wins.</h1>';
+}
+
+  else if (lowercase3.localeCompare('o') == 0 && lowercase6.localeCompare('o') == 0 && lowercase9.localeCompare('o') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>O wins.</h1>';
+}
+  else if (lowercase1.localeCompare('o') == 0 && lowercase5.localeCompare('o') == 0 && lowercase9.localeCompare('o') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>O wins.</h1>';
+}
+  else if (lowercase3.localeCompare('o') == 0 && lowercase5.localeCompare('o') == 0 && lowercase7.localeCompare('o') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>O wins.</h1>';
+}
+
+else if (lowercase2.localeCompare('o') == 0 && lowercase5.localeCompare('o') == 0 && lowercase8.localeCompare('o') == 0){
+    document.getElementById("yeet").innerHTML = '<h1>O wins.</h1>';
+}
+
+
+       }
+    </script>
+</html>
