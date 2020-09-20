@@ -1,0 +1,37 @@
+.header{
+color: white;
+background: dodgerBlue;
+text-align: center;
+height: 70px;
+}
+body{
+background-color: transparent;
+}
+.border{
+margin-left:-2px;
+}
+
+.grid-item {
+  background-color: transparent;
+  border: 5px solid dodgerBlue;
+  padding: 120px;
+  font-size: 30px;
+  text-align: center;
+    color:transparent;
+}
+
+
+
+.grid-container {
+   color:transparent;
+  position:relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: repeat(3,2fr) ;
+  background-color: transparent;
+  padding: 20px;
+  width: 100px;
+  left:30%;
+
+}
