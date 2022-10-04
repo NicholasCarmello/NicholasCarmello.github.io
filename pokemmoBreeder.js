@@ -6,20 +6,24 @@ class FiveBy31 {
     this.get_sD = document.getElementById("spD").value;
     this.get_speed = document.getElementById("spd").value;
     this.pokemon = {};
-    this.stepCounter = 1
+    this.stepCounter = 1;
   }
 
-  printSteps(array){
-    
-    for (var i = 0; i< array.length; i++){
-
-    document.getElementById("textbox").textContent += "Step " + this.stepCounter + ": Breed the 31 " + array[i]['value'] +  " with the 31 " + array[i]["2nd value"] + "\n"
-    this.stepCounter ++
-    
+  printSteps(array) {
+    for (var i = 0; i < array.length; i++) {
+      document.getElementById("textbox").textContent +=
+        "Step " +
+        this.stepCounter +
+        ": Breed the 31 " +
+        array[i]["value"] +
+        " with the 31 " +
+        array[i]["2nd value"] +
+        "\n";
+      this.stepCounter++;
     }
   }
   start() {
-    document.getElementById("textbox").textContent = ""
+    document.getElementById("textbox").textContent = "";
     var step_count = 0;
 
     var dicti = {};
@@ -78,23 +82,26 @@ class FiveBy31 {
       });
     }
     for (var i = 0; i < second_row.length; i += 2) {
-        var first = removeDuplicatesFromString(second_row[i]["value"] + " " + second_row[i]['2nd value']);
-        var second = removeDuplicatesFromString(second_row[i + 1]["value"] + " "  + second_row[i + 1]["2nd value"] );
-        
+      var first = removeDuplicatesFromString(
+        second_row[i]["value"] + " " + second_row[i]["2nd value"]
+      );
+      var second = removeDuplicatesFromString(
+        second_row[i + 1]["value"] + " " + second_row[i + 1]["2nd value"]
+      );
 
       third_row.push({
         value: first,
-        "2nd value": second 
+        "2nd value": second,
       });
     }
 
-
-
     for (var i = 0; i < third_row.length; i += 2) {
-
-      var first = removeDuplicatesFromString(third_row[i]["value"] + " " + third_row[i]['2nd value']);
-      var second = removeDuplicatesFromString(third_row[i + 1]["value"] + " "  + third_row[i + 1]["2nd value"] );
-      
+      var first = removeDuplicatesFromString(
+        third_row[i]["value"] + " " + third_row[i]["2nd value"]
+      );
+      var second = removeDuplicatesFromString(
+        third_row[i + 1]["value"] + " " + third_row[i + 1]["2nd value"]
+      );
 
       fourth_row.push({
         value: first,
@@ -102,13 +109,10 @@ class FiveBy31 {
       });
     }
 
-
-
     this.printSteps(first_row);
-    this.printSteps(second_row)
-    this.printSteps(third_row)
-    this.printSteps(fourth_row)
-
+    this.printSteps(second_row);
+    this.printSteps(third_row);
+    this.printSteps(fourth_row);
   }
 }
 function removeDuplicatesFromString(old_string) {
