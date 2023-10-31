@@ -2,136 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Resume</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Personal Projects</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body>
-    <header>
-      <!-- This needs to be done for the header, nav is for the links in the header "{{ url_for('static', filename='styles.css') }}" -->
 
-      <div class="header">
-        <h1><b>RESUME</b></h1>
-        
-        <a class="border" href="Tictactoe.html" target="_blank">
-          <b><h3 class="white">Tic Tac toe</h3></b>
-
-        </a>
-        
-        <a class="border" href="pokemmoBreeder.html" target="_blank">
-            <b><h3 style = "left:250px" class="white">pokemmo</h3></b>
-          </a>
-        
-        <br>
-        <br>
-        
-      </div>
-    </header>
-    <!-- article and section tags need to be filled in -->
+  <body style="background-color: #000033">
     <main>
-      <p>
-        <b style="font-size: 30px">Nicholas Carmello</b
-        ><span class="right"
-          ><a href="Https://www.github.com/nicholascarmello">Github</a></span
-        >
-      </p>
-      <p class="fixedLineTop">
-        <b>nick.carmello@yahoo.com | (518) 708-3248</b>
-        <span class="right"
-          ><a href="Https://www.linkedin.com/in/nickcarmello">Linkedin</a>
-        </span>
-      </p>
-
-      <h3 class="fixedLine">EDUCATION</h3>
-      <hr />
-      <p><b>Marist </b><span class="right"> Poughkeepsie, NY</span></p>
-      <p class="fixedTextJob">
-        <i
-          >Bachelor of Science in Computer Science
-          <span class="right">Expected May 2022</span>
-        </i>
-      </p>
-      <ul>
-        <li>GPA: 3.64/4.00</li>
-        <li>Concentration in software development</li>
-      </ul>
-      <h3 class="fixedLine"><b>WORK EXPERIENCE</b></h3>
-
-      <hr />
-      <p>
-        <b>Saratoga Race Track </b><span class="right"> Saratoga, NY </span>
-      </p>
-      <p class="fixedTextJob">
-        <i>Busser<span class="right"> June 2019 - August 2019</span></i>
-      </p>
-      <ul>
-        <li>
-          Fulfilled customers needs by continuously going to their tables and
-          cleaning up tables.
-        </li>
-      </ul>
-
-      <p>
-        <b>Delmonico's Italian steak house </b
-        ><span class="right"> Clifton Park, NY </span>
-      </p>
-      <p class="fixedTextJob">
-        <i>Busser <span class="right"> January 2018 - January 2020</span></i>
-      </p>
-      <ul>
-        <li>
-          I trained new employees by teaching them to stock shelves in an
-          organized way which made the process of pulling and stocking inventory
-          easier for the job
-        </li>
-        <li>
-          Communicated effectively with the wait staff and cooks by talking over
-          a headset and in return made everyday operations faster such as
-          lowering the wait time for customers.
-        </li>
-        <li>
-          Worked in a fast paced environment to lower the wait time for
-          customers.
-        </li>
-      </ul>
-
-      <h3 class="fixedLine"><b>PROJECTS</b></h3>
-      <hr />
-
-      <p>
-        <b>Tic-tac-toe</b> Built a tic-tac-toe game in python by using matrices
-        to support the board by gathering input from the client and substituting
-        answers to the matrices.
-      </p>
-      <h3 class="fixedLine"><b>COURSEWORK</b></h3>
-      <hr />
-      <p><b>Software Development</b></p>
-      <ul>
-        <li>
-          Developed basic programs in Java to learn techniques such as
-          recursion, object-oriented programming, queues, stacks, and file
-          manipulation.
-        </li>
-        <li>
-          Programmed in Flask and HTML to create a basic website with a login
-          system
-        </li>
-      </ul>
-      <p><b>Data Communications</b></p>
-      <ul>
-        <li>Studied Internets, networks, protocols, and Internet security</li>
-      </ul>
-      <p><b>System Analysis And Design</b></p>
-      <ul>
-        <li>
-          Studied the software development life cycle and implemented diagrams,
-          such as unified modeling language, entity-relationship and data flow
-          diagrams with the design of a library system.
-        </li>
-      </ul>
-
-      <h3 class="fixedLine"><b>REFERENCES</b></h3>
-      <hr />
-      <p>Available upon request</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm"></div>
+          <div class="col-sm"><div class="text-center"><h1 style="color: white">Personal Projects</h1></div></div>
+          <div class="col-sm"></div>
+        </div>
+      </div>
+      <br>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm"><div class="text-center"><a href="./compilers/index.html" class="btn btn-primary">Compiler</a></div></div>
+          <div class="col-sm"><div class="text-center"><a href="./pokemmo/pokemmoBreeder.html" type="button" class="btn btn-primary">Pokemmo Breeder</a></div></div>
+          <div class="col-sm"><div class="text-center"><a href="./TicTacToe/Tictactoe.html" class="btn btn-primary">Tic Tac Toe</a></div></div>
+        </div>
+      </div>
+      <div></div>
     </main>
 
     <footer></footer>
