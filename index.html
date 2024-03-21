@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <title>Personal Projects</title>
+    <title>Portfolio</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,31 +13,226 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="snakeGameForFrontPage.css" />
+    <script src="snakeGameForFrontPage.js" defer></script>
   </head>
+  <body>
+    <header>
+      <h4 class="headerLeft">Nicholas Carmello</h4>
+      <div class="hello">
+        <h4 onclick="document.getElementById('about').scrollIntoView();">
+          About
+        </h4>
+        <h4 onclick="document.getElementById('skills').scrollIntoView();">
+          Skills
+        </h4>
+        <h4 onclick="document.getElementById('projects').scrollIntoView();">
+          Projects
+        </h4>
+        <h4 onclick="document.getElementById('contact').scrollIntoView();">
+          Contact
+        </h4>
+      </div>
+    </header>
 
-  <body style="background-color: #000033">
     <main>
-      <br>
-      <br>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm"></div>
-          <div class="col-sm"><div class="text-center"><h1 style="color: white">Personal Projects</h1></div></div>
-          <div class="col-sm"></div>
+      <section>
+        <div style="display: flex; justify-content: space-between">
+          <div
+            style="
+              font-weight: bold;
+              font-size: 70px;
+              margin-top: 100px;
+            "
+          >
+            Hi, <br />
+            I'm Nick,<br />
+            A
+            <div class="animate"></div>
+            Developer.<br />
+            <button
+              class="btn btn-primary"
+              onclick="document.getElementById('contact').scrollIntoView();"
+            >
+              Contact Me
+            </button>
+            <a class="btn btn-primary" href="resume.html">My Résumé</a>
+          </div>
+          <img class="profilePhoto" src="static/IMG_1080.HEIC" />
         </div>
-      </div>
-      <br>
-      <br>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm"><div class="text-center"><a href="./compilers/index.html" class="btn btn-primary">Compiler</a></div></div>
-          <div class="col-sm"><div class="text-center"><a href="./pokemmo/pokemmoBreeder.html" type="button" class="btn btn-primary">Pokemmo Breeder</a></div></div>
-          <!-- <div class="col-sm"><div class="text-center"><a href="./TicTacToe/Tictactoe.html" class="btn btn-primary">Tic Tac Toe</a></div></div> -->
-        </div>
-      </div>
-      <div></div>
-    </main>
+        <br />
+      </section>
+      <br/>
+      <br/>
+      <section id="about">
+        <h1 style="font-weight: 1000">About Me</h1>
+        <br />
+        <br />
+        <p>
+          &nbsp;&nbsp;Hello, I'm Nicholas Carmello, A full stack software
+          engineer at Optum Technology with 2 years of experience. I graduated
+          at Marist College with a degree in computer science with a focus on
+          Software Development. Through my studies at Marist College, I learned
+          programming languages such as Python, Java, and Javascript. I
+          continued my studies on my free time with side projects. Some of these
+          projects can be seen below where I focused on mainly HTML, CSS,
+          Javascript and Typescript.
+        </p>
+        <p>
+          &nbsp;&nbsp; As a software engineer with 2 years of experience, I am
+          deeply committed to continuous learning and passionate about exploring
+          the ever-evolving landscape of technology. My journey so far has been
+          marked by a relentless pursuit of knowledge, where I've embraced
+          challenges as opportunities for growth. I actively seek out the latest
+          advancements in software development, eagerly diving into new
+          programming languages, frameworks, and methodologies. My passion for
+          coding is matched by a curiosity that drives me to understand the
+          'how' and 'why' behind every line of code. This thirst for knowledge
+          ensures that I remain adaptable and innovative, ready to contribute
+          effectively to dynamic tech environments.
+        </p>
+        <br />
+      </section>
+      <section id="skills">
+        <h1 style="font-weight: 1000">Skills and Technologies</h1>
+        <br />
+        <br />
+        <div class="skills">
+          <div class="skill">
+            <img class="javaLogo" src="./static/javaLogo.png" />
+            <div class="technology">Java</div>
+          </div>
+          <div class="skill">
+            <img class="javaLogo" src="./static/javascriptLogo.webp" />
+            <div class="technology">Javascript</div>
+          </div>
+          <div class="skill">
+            <img class="javaLogo" src="./static/typescriptLogo.png" />
+            <div class="technology">Typescript</div>
+          </div>
+          <div class="skill">
+            <img class="javaLogo" src="./static/reactLogo.png" />
+            <div class="technology">React</div>
+          </div>
+          <div class="skill">
+            <img class="javaLogo" src="./static/vueLogo.png" />
+            <div class="technology">Vue</div>
+          </div>
+          <div class="skill">
+            <img class="javaLogo" src="./static/newHtml.logo.webp" />
+            <div class="technology">HTML</div>
+          </div>
+          <div class="skill">
+            <img class="javaLogo" src="./static/cssLogo.png" />
+            <div class="technology">CSS</div>
+          </div>
+          <div class="skill">
+            <img class="javaLogo" src="./static/postgresLogo.png" />
+            <div class="technology">Postgres</div>
+          </div>
+          <div class="skill">
+            <img class="javaLogo" src="./static/mysqlLogo.svg" />
+            <div class="technology">MySQL</div>
+          </div>
+          <div class="skill">
+            <img class="javaLogo" src="./static/pythonLogo.jpeg" />
+            <div class="technology">Python</div>
+          </div>
 
-    <footer></footer>
+          <div class="skill">
+            <img class="javaLogo" src="./static/dockerLogo.png" />
+            <div class="technology">Docker</div>
+          </div>
+          <div class="skill">
+            <img class="javaLogo" src="./static/kubernetesLogo.png" />
+            <div class="technology">Kubernetes</div>
+          </div>
+
+          <div class="skill">
+            <img class="javaLogo" src="./static/airflowLogo.png" />
+            <div class="technology">Airflow</div>
+          </div>
+          <div class="skill">
+            <img class="javaLogo" src="./static/jenkinsLogo.jpeg" />
+            <div class="technology">Jenkins</div>
+          </div>
+          <div class="skill">
+            <img class="javaLogo" src="./static/gitLogo.png" />
+            <div class="technology">Git</div>
+          </div>
+          <div class="skill">
+            <img class="javaLogo" src="./static/swiftLogo.jpeg" />
+            <div class="technology">Swift</div>
+          </div>
+        </div>
+      </section>
+
+      <br />
+      <br />
+      <section id="projects">
+        <h1 style="font-weight: 1000">Projects</h1>
+        <br />
+        <br />
+        <div style="display: flex; justify-content: space-between">
+          <div class="allProjects">
+            <div class="project">
+              <div>
+                <div>HandWriting Hero</div>
+                <a href="https://apps.apple.com/us/app/handwriting-hero/id6472244332">link</a>
+              </div>
+              <p>
+                Developed an iOS app that detects handwriting in a photo and
+                displays it in text on the screen. This makes use of Apples
+                Vision Framework using the free version of the app.
+                Additionally, it provides an optional premium feature, enabling
+                enhanced handwriting analysis through advanced AI, offering
+                users deeper insights and superior accuracy.
+              </p>
+            </div>
+            <div class="project">
+              <div>
+                <div>Compiler</div>
+                <a href="compilers/index.html">link</a>
+              </div>
+              <p>
+                Developed a Compiler in my senior year of college which gave me
+                a deeper understanding on how a language is compiled. This
+                project was a deep dive into the intricate architecture of
+                compilers, encompassing the three fundamental components: the
+                Lexer, Parser, and Code Generator. Each element plays a pivotal
+                role in translating high-level language into machine code,
+                offering me invaluable insights into the underpinnings of
+                software development. For a detailed exploration of this
+                project, click here.
+              </p>
+            </div>
+            <div class="project">
+              <div>
+                <div>Snake</div>
+                <a href="snakeGame/snakeGame.html">link</a>
+              </div>
+              <p>
+                The snake itself is modeled using a linked list, allowing for dynamic growth and movement, while the game board is represented through a matrix and a CSS Grid, providing a robust and responsive playing field
+              </p>
+            </div>
+            <div class="project">
+              <p>Portfolio</p>
+              <p>My Humble Portfolio.</p>
+            </div>
+          </div>
+          <div class="grid-container-border">
+            <div class="score">Score:</div>
+            <div class="grid-container"></div>
+          </div>
+        </div>
+        <br />
+        <br />
+      </section>
+      <section id="contact">
+        <h1 style="font-weight: 1000">Contact Me</h1>
+        <p>Carmellonicholas@gmail.com</p>
+      </section>
+    </main>
   </body>
 </html>
