@@ -1,3 +1,7 @@
+.score{
+    display: none;
+}
+
 @media only screen and (min-width: 1430px) {
   .grid-container-border {
     display: flex;
@@ -6,8 +10,8 @@
     width: 700px;
     border: 1px solid rgb(70, 76, 85);
   }
+
   .score {
-    display: block;
     display: flex;
     position: absolute;
     color: white;
@@ -15,6 +19,7 @@
     margin-top: 24px;
     font-weight: bolder;
   }
+
   .grid-container {
     margin: auto;
     display: grid;
@@ -36,7 +41,6 @@
     justify-content: center;
     align-items: center;
     background-color: black;
-    /* border: 1px solid gray; */
   }
   .grid-item-coin {
     background-color: yellow;
@@ -51,8 +55,3 @@
   }
 }
 
-@media only screen and (min-width: 0px) {
-    .score{
-        display: none;
-    }
-}

@@ -204,10 +204,12 @@ document.addEventListener('click', function (event) {
 
 setInterval(() => {
 
-    //Check if last keyInput is down, right, left or up
+    //Return if the user is not clicked into the game
     if (!gameIsActive){
         return
     }
+
+    //Check if last keyInput is down, right, left or up
     switch (lastArrowKeyInput) {
 
         case "ArrowUp":
