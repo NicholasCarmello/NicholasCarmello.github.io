@@ -36,7 +36,7 @@ body{
     margin-left: 100px;
     margin-right: 100px;
 }
-.javaLogo{
+.logo{
     max-height: 100px;
 }
 .technology{
@@ -54,7 +54,7 @@ body{
   justify-self: start;
 }
 
-.hello{
+.navBar{
     display: flex;
     gap: 40px;
 }
